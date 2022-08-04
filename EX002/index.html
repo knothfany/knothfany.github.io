@@ -1,0 +1,278 @@
+<!DOCTYPE html> <!--Site em HTML5-->
+<html lang="pt-br">
+<head> <!--Onde fica a configuração do site-->
+    <meta charset="UTF-8"> <!--O site será compatível UTF-8, ou seja, compatível com acentos, ç e outros-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--O Site abrirá padrão, preenchendo toda a página.-->
+    <link rel="shortcut icon" href="imagens/favicon_io/favicon-32x32.png" type="image/x-icon"> <!--Adicionar Icone na Guia-->
+    <title>Caderno</title> <!--Titulo da Guia-->
+    <style>
+        body {
+            background-color:rgb(255, 255, 255)
+        }
+    </style>
+    <style> 
+        mark{
+            background-color: rgb(201, 63, 97);
+        }
+    </style>
+    <!--Esse style é para definir as abas.-->
+    <style>
+        .accordion {
+          background-color: rgb(233, 196, 235);
+          color: rgb(0, 0, 0);
+          cursor: pointer;
+          padding: 18px;
+          width: 100%;
+          border: none;
+          text-align: left;
+          outline: none;
+          font-size: 15px;
+          transition: 0.4s;
+        }
+        
+        .active, .accordion:hover {
+          background-color: rgb(218, 11, 63); 
+        }
+        
+        .panel {
+          padding: 0 18px;
+          display: none;
+          background-color: rgb(255, 255, 255);
+          overflow: hidden;
+        }
+        </style>
+</head>
+<body> <!--Corpo-->
+    <h1>CURSO DE HTML5 E CSS3 - Modulo 1 ou 5</h1>
+    <button class="accordion">Paragrafos e Quebras de Linha:</button>
+    <div class="panel">
+        <p>Voce pode escrever um paragrafo de qualquer jeito, 
+            basta colocar tudo no meio do par de tags &lt;p&gt; e &lt;/p&gt; <!--LT significa Lass Than= Menor que--> <!-- GT significa Greater Than= Maior que-->
+        </p> <!--Paragrafo-->
+        <p>Se precisar quebrar o texto em algum lugar específico <br>
+            como esse, você pode usar a tag &lt;br&gt; <!--Breack Rol-->.
+        </p>
+        <p>&lt;hr&gt; significa uma abertura de tag. (Um subtitulo do h1</p> 
+        <p>Para adcionar uma linha que separa um parágrafo do outro é so colocar &lt;hr&gt;</p>
+        <p>O número de quebras se diz pela quantidade de &lt;br&gt; que você coloca, por exemplo: &lt;br& &lt;br& &lt;br& <br><br><br> Três quebras - Isso é uma das forma iniciante</p>
+        <p>Vamos adicionar alguns simbolos epeciais:</p>
+        &reg; <!--Marca registrada-->
+        &copy; <!--Copy right-->
+        &trade; <!--Marca registrada em inglès-->
+        &euro; <!-- Simp=bolo da moeda-->
+        &delta; <!--Delta minusculo, para o maiusculo vai o D-->
+        &Delta;
+        &uparrow; <!--seta pra cima-->
+        <p>Para outros simbolos é só procurar Misc 5ymbols</p>
+        <P>Vamos adicionar alguns emoji -> Emojipedia.org </P>
+        😜 😄 <!--Pode copiar o emoji ou colocar o código--> &#x263A;
+    </div>
+    <button class="accordion">Como colocar Imagens?</button>
+    <div class="panel">
+        <p>1. Direitos autorais de imagem: <br>
+            Não pode pegar imagens na internet. Óbvio!
+            Passo a passo: Fazer a busca - CLicar em ferramentas - Direitos de uso - Segunda <!--usar e alterar-->, terceira <!--Usar sem editar--> e ultima opção <!--Não comercial--> - Melhor usar a segunda!
+            Sites pra utilizar: unsplash e Pexels.com    
+        </p>
+        <p>2. Formato de imagens: <br>
+            Para web, nós usamos basicamente jpeg (compacta a imagem) ou png (criado para substituir o formato gif, permite transparência). Tudo depende do que você quer ou o que você precisa.
+        </p>
+        <hr>
+    </div>
+    <button class="accordion">Testando carga de imagens:</button>
+<div class="panel">
+    <P>3. Tamanho das imagens: <br>
+        Tam. Max: 1500 para site <br>
+    </P>
+    <p>Abaixo você vai ver uma imagem que está na mesma pasta:</p>        
+    <img src="html logo 100.png" alt="Logo HTML5"> <!--Sors (origem) alternative (alternativa - explicação da imagem)--> 
+    <p>Podemos também carregar imagens que estão em subpastas:</p>
+    <img src="imagens/css3 logo 100.png" alt="">
+    <p>Também podemos carregar imagens externas:</p>
+    <img src="https://openclipart.org/download/272344/1486640958.svg" width="100" height="100" alt="Logo JavaScript"> <!--URL--> <!--Reduzir a imagem sem usar o gimp-->
+    <p>4. Como mudar o Favicon de um Site</p> <br> <!--Icones de Favoritos, ou seja o icone que fica na guia-->
+    - Sites para usar: <br>
+    ° https://iconarchive.com/search?q=html <br>
+    ° https://www.favicon.cc/ <br>
+    ° https://favicon.io/ <br>
+    <p>Colocar o icone no Head, conforme acima.</p>
+    <hr>  
+</div>
+<button class="accordion">Hierarquia de Títulos:</button>
+<div class="panel">
+    <p>Vejamos estas imagens:</p> <br>
+    <img src="imagens/jornal.png" width="250" height="300" alt="matéria de revista"> <img src="imagens/indice livro.png" width="250" height="200"  alt="Indice jornal"> <br>
+    <p>- A imagem da revista mostra o Título principal, os subtítulos e a matéria de cada título</p> 
+    <p>- NA imagem do indice, temos o titulo do livro, o título do capítulo e os subtitulos.</p> 
+    <p>- Existe uma hierarquia que devemos seguir.</p>
+    <p>Agora segue um exeplo de hierarquia de títulos usando a imgem do indice como exemplo:</p>
+    <h1>Entendendo Portugal</h1> <!--H1 é o título de nivel 1, o principal-->
+    <h2>1. Introção</h2>
+    <h3>1.2 Justificação da Temática</h3>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam quae facilis tempora velit rerum sit, doloremque, minima quaerat, dignissimos repudiandae officiis fugiat expedita soluta explicabo asperiores quis quam odit optio?</p>
+    <h3>1.3 Carater Excecional</h3>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam quae facilis tempora velit rerum sit, doloremque, minima quaerat, dignissimos repudiandae officiis fugiat expedita soluta explicabo asperiores quis quam odit optio?</p>
+    <h3>1.4 Metodologia de Investigação</h3>
+    <h4>1.4.1 Etapas de investigação</h4>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam quae facilis tempora velit rerum sit, doloremque, minima quaerat, dignissimos repudiandae officiis fugiat expedita soluta explicabo asperiores quis quam odit optio?</p>
+</div>
+<button class="accordion">Semântica:</button>
+<div class="panel">
+    <p>Significádo de semântica: Tem mais valor o significado do que a forma.</p>
+    <p>O HTML4 (antigo) não tinha os códigos iniciais (linguem pt-br,UTF-8...), apenas o head e body, onde o head era só o title:</p>
+    <p> &lt;HTML&gt; </p>
+    <p> &lt;head&gt; </p>
+    <p> &lt;Title&gt; </p>
+    <p> &lt;head&gt; </p>
+    <p> &lt;body&gt; </p>
+    <p> &lt;h1&gt; exemplo de site em html4 &lt;h1&gt; </p>
+    <p> &lt;p&gt; Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, itaque, soluta inventore eligendi quas excepturi labore totam natus atque at quisquam nam id veniam, eum sapiente velit similique adipisci earum! &lt;p&gt; </p>
+    <p> &lt;body&gt; </p>
+    <P>Site Obsolet Features - Ver os códigos que não se usam mais.</P>
+    <p>HTML hoje é usado para semântica. Aquilo que é a aparência é usado no CSS</p>
+</div>
+<button class="accordion">Formatação de Textos:</button>
+<div class="panel">
+    <p>Principais formatações:</p>
+    <p>-Negrito ou Destaque: <br>
+    Existem duas maneiras: Nâo semantica e semantica. <br>
+    *Nesta frase temos um <b>Termo em Negrito</b> usando a teg B (Não semântica) <!--Não tem significado, apenas forma--> <br>
+    * Nesta frase tem um <strong>Termo em Destaque</strong> usando a tag STRONG (Semântica). <!--Dá um sentido na forma--> </p>
+    <p><!--Isso é um termo de divisão--> - Itálico ou Ênfase: <br>
+    *Nesta frase, temos um <i>termo em Itálico</i> <!--Isso é um termo expansível--> usando a tag I (não semântica) <!--Outra forma de colocar o código na frase é selecionar e CTRL+SHIFT+P, depois clicar em wrap with abbreviation e digitar I (ex. de itálico), em seguida Enter.--> <br>
+    *Nesta frase temos um <em>termo em ênfase</em> usando a tag EM (Semântica).
+    </p>
+    <p>Texto marcado: <br>
+    Podemos criar também <mark style="background-color: lime">um texto marcado</mark> <!--A cor do marcador individual se muda dentro da tag (style)--> usando a tag MARK. <br>
+    E no outro parágrafo, temos <mark>outro texto marcado no final</mark></p> <!--Para mudar todos os marcadores, temos que criar um estilo no HEAD-->
+    <p>Texto GRANDE e pequeno: <br>
+    Estamos criando um <big>texto grande</big> <!--Está em vermelho, pois ficou obsoleta (nao se usa mais)--> e um <small>texto pequeno</small> neste parágrafo.</p>
+    <p>Texto Excluido/Deletado: <br> 
+    Podemos marcar <del>um texto como excluido</del> para e indicar que ele deve ser lido e não considerado.</p>
+    <p>Texto Inserido: <br>
+    Podemos marcar <ins>um texto como inserido</ins> para dar um a ênfase e indicar que ele foi adicionado depois. <br> Existe também a tag U, que deixa <u>o texto</u> sublinhado (sem semântica)</p>
+    <p>Texto sobrescrito: <br>
+    Para inserir coisas do tipo, x<sup>20</sup>=3</p>
+    <p>Texto Subscrito: <br>
+    Para inserir coisas do tipo H<sub>2</sub>0</p>
+    <h3>Outras formatações</h3>
+    <p>Código-Fonte e pré/formatação: <br>
+    O comando <code>document.getElementById('teste')</code> é escrito em linguagem JavaScript.</p> <!--Esse CODE serve para expassar igualmente as letras do comando, facilitando a vizualização.-->
+    <pre> <!-- Tudo o que estiver dentro do PRE, será formatado igual a forma que está representado no prorama.-->
+        <code>
+            num = int(input('digite um número'))
+            if num % 2 == 0:
+                print(f'O número {num} é PAR')
+            else:
+                print(f'O número {num} é ÍMPAR')
+            print('fim do programa')
+        </code>
+    </pre>
+    <p>Citações Simples: <br>
+    Como diria o pai de um amigo: <q>O computador é um burro</q> muito rápido.</p>
+    <p>Citações Completas: <br>
+    Segundo Jeff Noble no seu livro HTM para leigos:</p>
+    <blockquote cite="https://www.google.com.br/books/edition/HTML_XHTML_e_CSS_Para_Leigos/E8ZtDwAAQBAJ?hl=pt-BR&gbpv=1">
+        A diferença entre elementos inline e um bloco de texto é importante. OS elementos HTML neste capítulo descrevem os blocos de texto.
+    </blockquote>
+    <p>Abreviações: <br>
+    Estou estudando <abbr title="HyperText Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr>. Estou adorando!</p>
+    <p>Texto Invertido: <br>
+    <bdo dir="rtl">Estou aprendendo a criar coisas em HTML.</bdo></p>
+</div>
+<button class="accordion">Listas:</button>
+<div class="panel">
+    <h1>Trabalhando com Listas</h1>
+    <h2>Listas Ordenadas</h2> <!--Aquelas que a ordem faz a diferênça-->
+    <ol type="1" start="1"> <!--Opções de listagem e ordem que começa.-->
+        <li>Acordar</li> <!--List Iten-->
+        <Li>Ligar para o João</Li> <!--Apartir do HTML5 o final do Li </Li> se tornou opcional, funciona normalmente sem.-->
+        <li>Tomar café <!--Exemplo-->
+        <li>Escovar os dentes</li>
+    </ol> <!--Order List-->
+    <h2>Listas não Ordenadas.</h2>
+    <ul type="square"> <!--UNORDER LIST--> <!--Opções de type: disc, circle e square. -->
+        <li>café</li>
+        <li>pão</li>
+        <li>leite</li>
+    </ul>
+    <h2><Minhas Linguagens Favoritas></h2>
+    <ol>
+        <li>Antigas</li>
+        <ol type="a">
+            <li>clipper</li>
+            <li>visual basic</li>
+            <li>fortran</li>
+            <li>delphi</li>
+        </ol>
+        <li>Novas</li>
+        <ol type="a" start="5">
+            <li>PHP</li>
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>Kotling</li>    
+        </ol>
+    </ol>
+    <h2>Meus Jogos Favoritos</h2>
+    <ol>
+        <li>NES</li>
+        <ul>
+            <li>Mario</li>
+            <li>Ninja Gaiden</li>
+        </ul>
+        <li>SNES</li>
+        <ul>
+            <li>Mario</li>
+            <ul>
+                <li>Mario Bros 3</li>
+            </ul>
+            <li>Donkey Kong</li>
+        </ul>
+        <li>PlayStation</li>
+        <ul>
+            <li>Final Fantasy</li>
+            <li>Castlevania</li>
+        </ul>
+    </ol>
+    <h2>Lista de Definições</h2>
+    <dl>
+        <dt>HTML</dt> <!--Termo-->
+        <dd>Linguagem de marcação para a criação do conteúdo de um site.</dd> <!--Descrição-->
+        <dt>CSS</dt>
+        <dd>Linguagem de marcação para a criação do design de um site.</dd>
+        <dt>JavaScript</dt>
+        <dd>Linguagem de programação para a criação de interatividade de um site.</dd>
+    </dl>
+</div>
+<button class="accordion">Links e Âncoras:</button>
+<div class="panel">
+    <p>O ponto que é clicavel no site se chama Âncora, conhecido como Hiperlink</p>
+    <p>SEO - Organizador de links</p> 
+    <h1>Usando Links Externos:</h1>
+    <p>Você pode acessar o meu <a href="https://github.com/knothfany/knothfany.github.io" target="_blank" rel="external">repositório Público no GitHub</a></p> <!--Tag "a" de âncora.-->
+    <p>Você também pode acessar o meu <a href="https://www.youtube.com/channel/UC5fSfTEl8FuD6Nta6KbZsmw" target="_blank" rel="external">canal gratuito no YouTube</a></p> <!--Esse é um link que é do tipo external e eu quero que ele tenha um alvo em target _blank, que é uma janela em branco. Ou seja, ele abrirá em outra guia.-->
+    <h2>Usando links internos</h2>
+    <p>Serve para fazer a relação com outra página que diz respeito a nossa própria página.</p>
+    <p>Está é a primeira página do site. Se você quiser, pode acessar a minha <a href="pag002.html" rel="next">segunda página</a></p> <!--Quando o Link é interno, não precisa indicar a URL. Apenas que esteja na mesma pasta do servidor.-->
+    <p>Você também pode acessar a nossa <a href="noticias/pag003.html" target="_self">página de notícias</a>.</p>
+</div>
+    <!--Linguagem JavaScript para as abas.-->
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+              panel.style.display = "none";
+            } else {
+              panel.style.display = "block";
+            }
+          });
+        }
+        </script>
+</body>
+</html>
