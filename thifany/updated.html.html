@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>Feliz Aniversário!</title>
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+	<style type="text/css">
+
+		* {
+			box-sizing: border-box;
+			padding: 0;
+			margin: 0;
+			outline: 0;
+			font-family: "Ubuntu", "Arial", "Verdana", sans-serif;
+		}
+		body {
+			background-color: #9977FF;
+		}
+
+		main {
+			position: relative;
+			z-index: 1;
+			background-image: url('capa-3.jpeg');
+			background-size: cover;
+			width: 100%;
+			height: 100vh;
+		}
+		main:after {
+			position: absolute;
+			z-index: 10;
+			content: "";
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+		}
+
+		div.botao {
+			position: fixed;
+			z-index: 1000;
+			bottom: 15px;
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			background: #ff77e8;
+			color: #FFFFFF;
+			border: none;
+			font-weight: bold;
+			font-size: 16pt;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-content: center;
+			text-align: center;
+			font-family: "Arial", "Verdana", sans-serif;
+			cursor: pointer;
+		}
+		div.botaoprev {
+			left: 15px;
+		}
+		div.botaonext {
+			right: 15px;
+		}
+		div.botao:hover {
+			background: #7755DD;
+		}
+
+		section {
+			position: relative;
+			z-index: 100;
+			font-family: 'Ubuntu';
+			width: 100%;
+			height: 100%;
+			padding: 30px 10px 10px 10px;
+		}
+		section h3 {
+			text-align: center;
+			font-size: 1.5rem;
+		}
+		section h4 {
+			text-align: center;
+			font-size: 1rem;
+			margin-bottom: 20px;
+		}
+		section div {
+			text-align: center;
+			height: 65%;
+		}
+		section div img {
+			max-height: 100%;
+			max-width: 100%;
+			border-radius: 10px;
+			border: 5px solid #FFFFFF;
+		}
+
+	</style>
+</head>
+<body>
+
+	<main style="display:none">
+
+		<div id="prev" class="botao botaoprev" data-direction="prev"><</div>
+		<div id="next" class="botao botaonext" data-direction="next">></div>
+		
+		<!-- sections -->
+
+	</main>
+	<aside style="display:none">
+		Errou a Senha miserável!
+	</aside>
+
+	<!-- JS -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		const urlParams = new URLSearchParams(window.location.search);
+		const user = urlParams.get('senha');
+		if (user == "amada") {
+			$("main").show();
+		} else {
+			$("aside").show();
+			window.location.assign("index.html.html");
+		}
+
+		url = window.location.toString().split('?')[0];
+		window.history.replaceState({}, document.title, url);
+
+		const slide = [
+			{
+				titulo: "Feliz aniversário meu <b>Amado</b>!",
+				subtitulo: "Com base no meu filme de comédia romântica preferido, fiz essa declaração:",
+				imagem: "0-felizaniversario.png"
+			}
+			,{
+				titulo: "Dez coisas que eu <s>odeio</s>  amo em VOCÊ!",
+				subtitulo: "",
+				imagem: "10-coisas.png"
+			}
+			,{
+				titulo: "Primeiramente, AMO a sua parceria",
+				subtitulo: "",
+				imagem: "1-parceria.jpg"
+			}
+			,{
+				titulo: "Segundamente kkk, AMO quando fazemos idiotices juntos",
+				subtitulo: "",
+				imagem: "2-idiotices.jpg"
+			}
+			,{
+				titulo: "Ter... Parei! AMO nossos momentos juntos",
+				subtitulo: "",
+				imagem: "3-lovee.jpg"
+			}
+			,{
+				titulo: "AMO quando você da aquela piscadinha",
+				subtitulo: "",
+				imagem: "4-piscada.png"
+			}
+			,{
+				titulo: "AMO quando me trata como uma princesa",
+				subtitulo: "",
+				imagem: "5-princesa.jpg"
+			}
+			,{
+				titulo: "AMO quando você cuida de mim",
+				subtitulo: "",
+				imagem: "6-cuidado.jpg"
+			}
+			,{
+				titulo: "AMO quando assiste todos os vídeos que mando no Instagram",
+				subtitulo: "",
+				imagem: "7-insta.png"
+			}
+			,{
+				titulo: "AMO os seus momentos de 'brisa' kkk, quando você está leve e bobinho",
+				subtitulo: "",
+				imagem: "8-bobinho.png"
+			}
+			,{
+				titulo: "AMO quando você me tira da zona de conforto e me leva para conhecer lugares novos",
+				subtitulo: "",
+				imagem: "9-conforto.jpg"
+			}
+			,{
+				titulo: "AMO quando me chama de amada!",
+				subtitulo: "",
+				imagem: "10-amada.png"
+			}
+			,{
+				titulo: "Notas de agradecimento:",
+				subtitulo: "Agradeço ao meu namorado, que me ajudou desde o começo sem saber que estava me ajudando 😉",
+				imagem: "17-namoro.jpeg"
+			}
+		]
+
+		for (var i = 0; i < Object.keys(slide).length; i++) {
+			if (i == 0) {
+				$("main").append("<section class='slides' id='slide"+i+"'><h3>"+slide[i].titulo+"</h3><h4>"+slide[i].subtitulo+"</h4><div><img src='"+slide[i].imagem+"'></div></section>");
+			} else {
+				$("main").append("<section class='slides' id='slide"+i+"' style='display:none'><h3>"+slide[i].titulo+"</h3><h4>"+slide[i].subtitulo+"</h4><div><img src='"+slide[i].imagem+"'></div></section>");
+			}
+		}
+
+		let secativo = 0;
+		let numerosec = $(".slides").length;
+		$(".botao").click(function(){
+			if ($(this).attr('data-direction') == "prev") {
+				let secatual = secativo
+				secativo--;
+				$("#slide"+secatual).hide();
+				$("#slide"+secativo).show();
+			}
+			if ($(this).attr('data-direction') == "next") {
+				let secatual = secativo
+				secativo++;
+				$("#slide"+secatual).hide();
+				$("#slide"+secativo).show();
+			}
+			if (secativo == 0) {
+				$("#prev").hide();
+			} else {
+				$("#prev").show();
+			}
+			if (secativo == numerosec-1) {
+				$("#next").hide();
+			} else {
+				$("#next").show();
+			}
+		});
+		$(document).ready(function(){
+			$("#prev").hide();
+		});
+	</script>
+
+</body>
+</html>
